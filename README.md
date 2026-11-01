@@ -1,19 +1,19 @@
-# Bowornthat Kerdsong - e-portfolio (static site)
+# Bowornthat Kerdsong - e-portfolio (static site, v7)
 
-Single-page bilingual (Thai / English) portfolio. No build tools are needed to host it.
+Single-page bilingual (Thai / English) portfolio mirroring the printed Portfolio book (sections 01-10).
+No build tools are needed to host it.
 
 ## Publish on GitHub Pages
-1. Create a GitHub repository (for example `portfolio`). It must be public on a free account.
+1. Create a GitHub repository (public on a free account).
 2. Upload the **contents** of this `site/` folder to the repository root (`index.html`, `assets/`, `.nojekyll`, `README.md`).
-   Via the web: *Add file > Upload files*, drag the contents in, commit. (`.nojekyll` is a hidden file - if your file manager hides it, upload it from the terminal or create an empty file with that name on GitHub.)
-3. In the repository: *Settings > Pages > Build and deployment*. Source = *Deploy from a branch*, Branch = `main`, folder = `/ (root)`. Save.
-4. After a minute the site is live at `https://USERNAME.github.io/REPO/`. Open it on a phone, check both languages, then generate the QR code from that exact URL.
-5. Optional: add the two Open Graph lines marked `TODO` in the `<head>` of `index.html` (absolute `og:url` and `og:image`) so link previews show the photo.
+   Each PDF is under 25 MB, the web-upload limit per file. `.nojekyll` is a hidden file - upload it from the terminal or create an empty file with that name on GitHub.
+3. *Settings > Pages > Build and deployment*: Deploy from a branch, `main`, `/ (root)`. Save.
+4. After a minute the site is live at `https://USERNAME.github.io/REPO/`. Check both languages on a phone, then generate the QR code from that exact URL.
 
 Useful URLs: `.../?lang=en` opens English, `.../?lang=th` opens Thai. Default is Thai.
 
-## Regenerate after editing content
-Edit the JSON files in `../_src/`, then run `python3 ../_src/build_site.py` (needs Python 3 with Pillow). The script rebuilds `index.html`, re-exports every photo (metadata stripped, max 1400 px) and re-copies the two CV PDFs, then runs its own checks.
+## Regenerate after editing
+`python3 ../_src/build_site.py` (needs Python 3 with Pillow and beautifulsoup4). The script refreshes its mirror of the book build (`_src/bookref/`), re-exports every photo (metadata stripped, never cropped) and copies the newest CV and Portfolio (web) PDFs.
 
 ## Privacy note
-The page carries `noindex, nofollow`, but that only asks search engines to stay away - anyone with the link can read it. The Personal section includes date of birth, home address and dormitory room, as in the CV; remove blocks from the content JSON if you do not want them online.
+The page carries `noindex, nofollow`, but anyone with the link can read it. The Personal block includes date of birth, home address and dormitory room, as in the CV and the book.
