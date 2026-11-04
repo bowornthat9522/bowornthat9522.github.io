@@ -1,6 +1,7 @@
-# Bowornthat Kerdsong - e-portfolio (static site, v7)
+# Bowornthat Kerdsong - e-portfolio (static site, v8)
 
-Single-page bilingual (Thai / English) portfolio mirroring the printed Portfolio book (sections 01-10).
+Single-page bilingual (Thai / English) portfolio mirroring the printed Portfolio book (sections 01-10), with a vital-signs strip and a 2015-2027 timeline before the book sections.
+Fonts: Google Fonts (IBM Plex Sans Thai, Noto Sans Thai, IBM Plex Mono) with system fallbacks; no external scripts.
 No build tools are needed to host it.
 
 ## Publish on GitHub Pages
